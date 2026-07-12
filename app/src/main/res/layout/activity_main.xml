@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/service_status_label"
+        android:textAppearance="?attr/textAppearanceBody1" />
+
+    <TextView
+        android:id="@+id/serviceStatusValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/service_status_disabled"
+        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/openAccessibilitySettingsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/open_accessibility_settings" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/blockingEnabledSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:checked="true"
+        android:text="@string/blocking_enabled_label" />
+
+    <TextView
+        android:id="@+id/consentStatusValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/consent_status_not_accepted"
+        android:textAppearance="?attr/textAppearanceBody2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/daily_allowance_label"
+        android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+    <Spinner
+        android:id="@+id/dailyAllowanceSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/dailyAllowanceStatusValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/daily_allowance_status_initial"
+        android:textAppearance="?attr/textAppearanceBody2" />
+
+    <TextView
+        android:id="@+id/temporaryUnblockStatusValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/temporary_unblock_inactive"
+        android:textAppearance="?attr/textAppearanceBody2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/temporaryUnblockCancelButton"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:text="@string/temporary_unblock_cancel" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/phase_three_notice"
+        android:textAppearance="?attr/textAppearanceBody2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/openPrivacyPolicyButton"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/open_privacy_policy" />
+
+    </LinearLayout>
+</ScrollView>
