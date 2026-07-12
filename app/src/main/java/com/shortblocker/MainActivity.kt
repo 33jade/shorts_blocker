@@ -1,4 +1,4 @@
-package com.youtubeshortblocker
+﻿package com.shortblocker
 
 import android.content.ComponentName
 import android.content.Intent
@@ -9,10 +9,10 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.youtubeshortblocker.accessibility.ShortsBlockerService
-import com.youtubeshortblocker.databinding.ActivityMainBinding
-import com.youtubeshortblocker.settings.BlockSettingsRepository
-import com.youtubeshortblocker.settings.RuntimeBlockSettings
+import com.shortblocker.accessibility.ShortsBlockerService
+import com.shortblocker.databinding.ActivityMainBinding
+import com.shortblocker.settings.BlockSettingsRepository
+import com.shortblocker.settings.RuntimeBlockSettings
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.util.concurrent.TimeUnit

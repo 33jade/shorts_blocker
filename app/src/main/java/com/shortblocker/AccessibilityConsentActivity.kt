@@ -1,12 +1,12 @@
-package com.youtubeshortblocker
+﻿package com.shortblocker
 
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.youtubeshortblocker.databinding.ActivityAccessibilityConsentBinding
-import com.youtubeshortblocker.settings.BlockSettingsRepository
+import com.shortblocker.databinding.ActivityAccessibilityConsentBinding
+import com.shortblocker.settings.BlockSettingsRepository
 import kotlinx.coroutines.launch
 
 class AccessibilityConsentActivity : AppCompatActivity() {

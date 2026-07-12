@@ -1,4 +1,4 @@
-package com.youtubeshortblocker.accessibility
+﻿package com.shortblocker.accessibility
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

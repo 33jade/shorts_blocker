@@ -1,16 +1,16 @@
-# YoutubeShortBlocker Privacy Policy
+# ShortBlocker Privacy Policy
 
 Last updated: 2026-07-12
 
-This Privacy Policy explains how YoutubeShortBlocker handles data.
+This Privacy Policy explains how ShortBlocker handles data.
 
 ## 1. App Purpose
 
-YoutubeShortBlocker helps reduce long viewing sessions on YouTube Shorts. The app uses Android AccessibilityService only to detect YouTube Shorts playback screens and leave those screens according to the user's settings.
+ShortBlocker helps reduce long viewing sessions on YouTube Shorts. The app uses Android AccessibilityService only to detect YouTube Shorts playback screens and leave those screens according to the user's settings.
 
 ## 2. Developer and Contact
 
-- App name: YoutubeShortBlocker
+- App name: ShortBlocker
 - Developer: TODO: developer name
 - Privacy contact: TODO: contact email or contact form URL
 
@@ -42,7 +42,7 @@ These values are used to apply the user's blocking, allowance, and temporary unb
 
 ## 5. Data Collection and Sharing
 
-YoutubeShortBlocker does not collect, transmit, sell, or share personal data with external servers, developers, advertisers, analytics providers, or other third parties.
+ShortBlocker does not collect, transmit, sell, or share personal data with external servers, developers, advertisers, analytics providers, or other third parties.
 
 The app does not use accounts, advertising identifiers, analytics SDKs, crash reporting SDKs, or external tracking SDKs.
 
@@ -59,7 +59,7 @@ To delete locally stored data, the user can:
 - Clear the app's storage from Android system settings, or
 - Uninstall the app.
 
-YoutubeShortBlocker does not create a user account, so there is no account deletion process.
+ShortBlocker does not create a user account, so there is no account deletion process.
 
 ## 8. Security
 
@@ -67,7 +67,7 @@ The app stores settings in app-private local storage. Because the app does not t
 
 ## 9. AccessibilityService Disclosure
 
-YoutubeShortBlocker uses AccessibilityService for the following purposes:
+ShortBlocker uses AccessibilityService for the following purposes:
 
 - Detecting YouTube Shorts playback screens
 - Automatically leaving Shorts screens when blocking is active
@@ -79,4 +79,3 @@ The AccessibilityService is not used to read passwords, payment information, pri
 ## 10. Changes to This Policy
 
 If the app's data access, storage, sharing, or AccessibilityService behavior changes, this Privacy Policy and the in-app disclosure will be updated. If the consent disclosure changes materially, the app will require consent to the updated version before analysis or automatic actions resume.
-

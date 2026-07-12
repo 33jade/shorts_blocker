@@ -4,7 +4,7 @@ Last updated: 2026-07-12
 
 ## 1. Purpose
 
-Phase 4 verifies that YoutubeShortBlocker works safely in realistic YouTube usage:
+Phase 4 verifies that ShortBlocker works safely in realistic YouTube usage:
 
 - Shorts playback is blocked when blocking is active.
 - Normal YouTube screens are not blocked.
@@ -57,7 +57,7 @@ Useful log commands:
 Launch app:
 
 ```powershell
-& "C:\Users\816a2\AppData\Local\Android\Sdk\platform-tools\adb.exe" shell monkey -p com.youtubeshortblocker 1
+& "C:\Users\816a2\AppData\Local\Android\Sdk\platform-tools\adb.exe" shell monkey -p com.shortblocker 1
 ```
 
 ## 4. Acceptance Tests

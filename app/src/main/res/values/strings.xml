@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">YoutubeShortBlocker</string>
+    <string name="app_name">ShortBlocker</string>
     <string name="accessibility_service_name">Shorts Blocker</string>
     <string name="accessibility_service_description">YouTubeの画面構造を確認し、Shorts再生画面から自動的に離脱するために使用します。</string>
     <string name="accessibility_service_summary">YouTube Shortsの長時間閲覧を防ぎます。</string>
@@ -34,7 +34,7 @@
     <string name="block_intervention_open_settings">ブロック設定を開く</string>
     <string name="youtube_home_open_failed">YouTube Homeを開けませんでした</string>
     <string name="accessibility_consent_title">ユーザー補助サービスの利用に同意してください</string>
-    <string name="accessibility_consent_purpose">YoutubeShortBlockerは、YouTube Shortsの長時間閲覧を防ぐためにユーザー補助サービスを使用します。同意するとAndroidのユーザー補助設定へ進みます。</string>
+    <string name="accessibility_consent_purpose">ShortBlockerは、YouTube Shortsの長時間閲覧を防ぐためにユーザー補助サービスを使用します。同意するとAndroidのユーザー補助設定へ進みます。</string>
     <string name="accessibility_consent_access_title">アクセスする情報</string>
     <string name="accessibility_consent_access_body">YouTubeアプリの画面構造、View ID、画面上のテキスト、コンテンツ説明を確認し、Shorts再生画面かどうかを判定します。</string>
     <string name="accessibility_consent_storage_title">端末内に保存する情報</string>
@@ -45,6 +45,6 @@
     <string name="accessibility_consent_decline">同意しない</string>
     <string name="open_privacy_policy">プライバシーポリシーを開く</string>
     <string name="privacy_policy_title">プライバシーポリシー</string>
-    <string name="privacy_policy_body">最終更新日: 2026-07-12\n\nYoutubeShortBlockerは、YouTube Shortsの長時間閲覧を防ぐためのアプリです。ユーザーが明示的に同意し、Androidのユーザー補助サービスを有効にした場合のみ、YouTubeアプリの画面構造、View ID、画面上のテキスト、コンテンツ説明を確認し、Shorts再生画面かどうかを判定します。\n\n端末内に保存する情報は、ブロックON/OFF、同意バージョン、1日許可時間、当日の使用時間、一時解除期限、ブロック説明画面の有効状態です。これらはAndroid DataStoreを使って端末内に保存され、アプリの設定とブロック制御にのみ使用されます。\n\nYoutubeShortBlockerは、画面内容、設定値、使用時間、個人データを外部サーバーへ送信しません。広告、分析、クラッシュレポート、外部トラッキングSDKは使用しません。個人データの販売や第三者共有も行いません。\n\n開発用ビルドでは、動作確認のためYouTube画面のView IDをAndroid logcatへ出力する場合があります。このログはアプリによって外部送信されません。リリースビルドでは開発用の画面構造ログを出力しない方針です。\n\n保存された設定と使用時間は、ユーザーがAndroid設定からアプリのストレージを削除するか、アプリをアンインストールするまで端末内に保持されます。このアプリはアカウントを作成しないため、アカウント削除手続きはありません。\n\nユーザー補助サービスは、Shorts画面の検知、自動離脱、1日許可時間と一時解除の反映、ブロック説明画面の表示にのみ使用します。パスワード、支払い情報、個人メッセージの取得、広告、追跡、プロファイリングには使用しません。\n\n公開前に、Google Playに表示する開発者名と問い合わせ先を公開版のプライバシーポリシーへ記載してください。</string>
+    <string name="privacy_policy_body">最終更新日: 2026-07-12\n\nShortBlockerは、YouTube Shortsの長時間閲覧を防ぐためのアプリです。ユーザーが明示的に同意し、Androidのユーザー補助サービスを有効にした場合のみ、YouTubeアプリの画面構造、View ID、画面上のテキスト、コンテンツ説明を確認し、Shorts再生画面かどうかを判定します。\n\n端末内に保存する情報は、ブロックON/OFF、同意バージョン、1日許可時間、当日の使用時間、一時解除期限、ブロック説明画面の有効状態です。これらはAndroid DataStoreを使って端末内に保存され、アプリの設定とブロック制御にのみ使用されます。\n\nShortBlockerは、画面内容、設定値、使用時間、個人データを外部サーバーへ送信しません。広告、分析、クラッシュレポート、外部トラッキングSDKは使用しません。個人データの販売や第三者共有も行いません。\n\n開発用ビルドでは、動作確認のためYouTube画面のView IDをAndroid logcatへ出力する場合があります。このログはアプリによって外部送信されません。リリースビルドでは開発用の画面構造ログを出力しない方針です。\n\n保存された設定と使用時間は、ユーザーがAndroid設定からアプリのストレージを削除するか、アプリをアンインストールするまで端末内に保持されます。このアプリはアカウントを作成しないため、アカウント削除手続きはありません。\n\nユーザー補助サービスは、Shorts画面の検知、自動離脱、1日許可時間と一時解除の反映、ブロック説明画面の表示にのみ使用します。パスワード、支払い情報、個人メッセージの取得、広告、追跡、プロファイリングには使用しません。\n\n公開前に、Google Playに表示する開発者名と問い合わせ先を公開版のプライバシーポリシーへ記載してください。</string>
     <string name="privacy_policy_close">閉じる</string>
 </resources>

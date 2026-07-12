@@ -1,10 +1,10 @@
-# YoutubeShortBlocker 基本設計書
+# ShortBlocker 基本設計書
 
 ## 1. 文書情報
 
 | 項目 | 内容 |
 | --- | --- |
-| アプリ名 | YoutubeShortBlocker |
+| アプリ名 | ShortBlocker |
 | 対象OS | Android 8.0（API Level 26）以上 |
 | 対象アプリ | Android版 YouTube（パッケージ名: `com.google.android.youtube`） |
 | 主な実装言語 | Kotlin |

@@ -1,4 +1,4 @@
-package com.youtubeshortblocker.accessibility
+﻿package com.shortblocker.accessibility
 
 internal class AnalysisEventController(
     private val environment: Environment,

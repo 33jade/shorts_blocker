@@ -1,4 +1,4 @@
-package com.youtubeshortblocker.settings
+﻿package com.shortblocker.settings
 
 internal class ShortsAllowanceTracker(
     private val maxSingleUsageMs: Long = 5_000L,

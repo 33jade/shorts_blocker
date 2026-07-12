@@ -1,4 +1,4 @@
-package com.youtubeshortblocker.settings
+﻿package com.shortblocker.settings
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

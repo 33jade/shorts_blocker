@@ -1,4 +1,4 @@
-package com.youtubeshortblocker.accessibility
+﻿package com.shortblocker.accessibility
 
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.runBlocking

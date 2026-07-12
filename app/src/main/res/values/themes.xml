@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.YoutubeShortBlocker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.ShortBlocker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">#B3261E</item>
         <item name="colorPrimaryVariant">#8C1D18</item>
         <item name="colorOnPrimary">#FFFFFF</item>

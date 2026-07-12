@@ -1,4 +1,4 @@
-package com.youtubeshortblocker.accessibility
+﻿package com.shortblocker.accessibility
 
 import android.view.accessibility.AccessibilityNodeInfo
 

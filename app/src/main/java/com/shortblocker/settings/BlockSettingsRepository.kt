@@ -1,4 +1,4 @@
-package com.youtubeshortblocker.settings
+﻿package com.shortblocker.settings
 
 import android.content.Context
 import androidx.datastore.preferences.core.booleanPreferencesKey

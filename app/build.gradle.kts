@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.youtubeshortblocker"
+    namespace = "com.shortblocker"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.youtubeshortblocker"
+        applicationId = "com.shortblocker"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

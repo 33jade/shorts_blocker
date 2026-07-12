@@ -1,8 +1,8 @@
-package com.youtubeshortblocker
+﻿package com.shortblocker
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.youtubeshortblocker.databinding.ActivityPrivacyPolicyBinding
+import com.shortblocker.databinding.ActivityPrivacyPolicyBinding
 
 class PrivacyPolicyActivity : AppCompatActivity() {
 

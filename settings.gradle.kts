@@ -17,5 +17,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "YoutubeShortBlocker"
+rootProject.name = "ShortBlocker"
 include(":app")

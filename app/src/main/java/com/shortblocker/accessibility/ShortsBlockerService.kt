@@ -1,4 +1,4 @@
-package com.youtubeshortblocker.accessibility
+﻿package com.shortblocker.accessibility
 
 import android.accessibilityservice.AccessibilityService
 import android.content.Intent
@@ -7,11 +7,11 @@ import android.util.Log
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Toast
-import com.youtubeshortblocker.BlockInterventionActivity
-import com.youtubeshortblocker.BuildConfig
-import com.youtubeshortblocker.settings.BlockSettingsRepository
-import com.youtubeshortblocker.settings.RuntimeBlockSettings
-import com.youtubeshortblocker.settings.ShortsAllowanceTracker
+import com.shortblocker.BlockInterventionActivity
+import com.shortblocker.BuildConfig
+import com.shortblocker.settings.BlockSettingsRepository
+import com.shortblocker.settings.RuntimeBlockSettings
+import com.shortblocker.settings.ShortsAllowanceTracker
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart

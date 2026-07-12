@@ -1,4 +1,4 @@
-# YoutubeShortBlocker 開発ロードマップ
+# ShortBlocker 開発ロードマップ
 
 ## 0. 現在の進捗
 
@@ -328,7 +328,7 @@
 - Phase 3完了判定時点で`testDebugUnitTest` 29件と`assembleDebug`が成功することを再確認した。ストア掲載用プライバシーポリシーURL公開、手動通し確認、性能測定、Play Console提出物はPhase 4およびリリース前確認へ持ち越す。
 - `docs/phase4-acceptance-test-plan.md`を追加し、AC-01〜AC-12、Phase 3設定操作、性能スモーク、証跡ファイル名、PowerShell/ADB手順を整理した。
 - Phase 4初期確認として`testDebugUnitTest` 29件、`assembleDebug`、Android 15/API 35エミュレータへのDebug APK再インストールが成功することを確認した。
-- `adb shell am start -n com.youtubeshortblocker/.MainActivity`で`MainActivity`を起動し、`dumpsys window`で`com.youtubeshortblocker/.MainActivity`がフォーカスされることを確認した。
+- `adb shell am start -n com.shortblocker/.MainActivity`で`MainActivity`を起動し、`dumpsys window`で`com.shortblocker/.MainActivity`がフォーカスされることを確認した。
 - 一時解除中に即時停止できるよう、`MainActivity`と`BlockInterventionActivity`へ「一時解除を停止」ボタンを追加した。停止時は一時解除期限を`0`へ戻す。
 - 一時解除停止UI追加後に`testDebugUnitTest`と`assembleDebug`が成功することを確認した。
 - 1日あたりのShorts許可時間を`許可しない`、`5`、`10`、`15`、`20`、`30`、`60`分のプルダウン選択へ変更した。`許可しない`は内部値`0`分として扱う。
