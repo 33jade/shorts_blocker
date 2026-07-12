@@ -86,10 +86,10 @@ Launch app:
 | --- | --- | --- | --- | --- | --- |
 | P3-01 | Daily allowance dropdown works | Select 許可しない, 5, 10, 15, 20, 30, and 60 minutes from the dropdown | Selected allowance is retained and reflected in remaining time display |  |  |
 | P3-02 | Daily allowance reaches block state | Use Shorts until allowance is exhausted, or use a debug-shortened scenario if added later | Shorts is blocked after allowance is exhausted |  |  |
-| P3-03 | Temporary unblock permits Shorts | Trigger block explanation screen, tap 5 or 10 minute temporary unblock, open Shorts | Shorts is not blocked during temporary unblock |  |  |
+| P3-03 | Temporary unblock permits Shorts | Trigger block explanation screen, tap 5 minute temporary unblock, open Shorts | Shorts is not blocked during temporary unblock |  |  |
 | P3-04 | Temporary unblock expires | Wait until temporary unblock expires, open Shorts | Blocking resumes automatically |  |  |
 | P3-05 | Temporary unblock can be canceled | Start 5 minute temporary unblock, tap cancel temporary unblock in app settings | Temporary unblock status returns to inactive and blocking resumes |  |  |
-| P3-06 | Block explanation actions work | Trigger block explanation screen | YouTube button opens YouTube Home, temporary unblock buttons set unblock and open YouTube; cancel button stops active temporary unblock |  |  |
+| P3-06 | Block explanation actions work | Trigger block explanation screen | YouTube button opens YouTube Home, 5 minute temporary unblock button sets unblock and opens YouTube; cancel button stops active temporary unblock |  |  |
 | P3-07 | Privacy policy is accessible | Tap privacy policy button in app | Privacy policy screen opens and closes normally |  |  |
 
 ## 6. Performance Smoke Tests

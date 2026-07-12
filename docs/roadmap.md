@@ -145,7 +145,7 @@
 - 無効時にユーザー補助設定画面へ移動するボタンを表示する。
 - アプリ内にブロック機能のON／OFFスイッチを追加する。
 - 「1日あたりShortsを許可する時間」を設定できるUIを追加する。初期候補は`0分（完全ブロック）`、`5分`、`10分`、`15分`とし、初期リリースではプリセット選択を優先する。
-- 「一時解除」ボタンを追加し、必要な場合だけ短時間ブロックを停止できるようにする。初期候補は`5分解除`、`10分解除`とする。
+- 「一時解除」ボタンを追加し、必要な場合だけ短時間ブロックを停止できるようにする。初期リリースではブロック説明画面の`5分解除`のみとする。
 - 当日の許可時間の残り、消費済み時間、一時解除中の残り時間をアプリ内に表示する。
 - `BlockSettingsRepository`を実装し、設定値をDataStoreに保存する。
 - Phase 2の仮フラグを`BlockSettingsRepository`へ接続する。
@@ -187,7 +187,7 @@
 | 1日許可時間設定が保持され、許可時間内は遮断せず、上限到達後は遮断する | OK | `RuntimeBlockSettingsTest`と`ShortsAllowanceTrackerTest`で残時間・消費計測を検証し、サービス側で許可時間内は退避せず消費記録のみ行う。 |
 | 一時解除中は遮断せず、期限到達後は遮断動作へ戻る | OK | `temporaryUnblockUntilEpochMs`をDataStoreへ保存し、`isAnalysisAllowed`/`isBlockingActive`で期限を判定する。 |
 | ブロック時に正常動作だと理解できる説明画面または通知が表示される | OK | HOME退避成功後に`BlockInterventionActivity`を表示し、失敗時のみToastへフォールバックする。 |
-| 説明画面からYouTube Homeへ戻る、設定を開く、一時解除する操作が行える | OK | `BlockInterventionActivity`にYouTube起動、`MainActivity`起動、5分/10分一時解除ボタンを実装済み。 |
+| 説明画面からYouTube Homeへ戻る、設定を開く、一時解除する操作が行える | OK | `BlockInterventionActivity`にYouTube起動、`MainActivity`起動、5分一時解除ボタンを実装済み。 |
 | 明示的同意前はユーザー補助設定へ進まず、同意後のみ設定画面へ誘導される | OK | `MainActivity`は直接設定を開かず`AccessibilityConsentActivity`へ遷移し、肯定ボタンでのみ同意保存と設定画面遷移を行う。 |
 | 開示内容と実際のデータアクセス、保存、共有動作が一致する | OK | 同意画面と`docs/privacy-policy.md`に画面構造・View ID・テキスト・コンテンツ説明、端末内保存、外部送信なしを記載。実装も外部通信・広告・分析SDKなし。 |
 | Android設定からサービスを直接有効化しても、未同意なら解析やグローバル操作を行わない | OK | `RuntimeBlockSettings.isConsentAccepted()`が必要同意バージョン一致を要求し、未同意時は`isAnalysisAllowed`/`isBlockingActive`がfalseになる。 |
@@ -303,7 +303,7 @@
 - Phase 2完了条件を照合し、手動確認、ログ証跡、単体テスト結果からPhase 2を完了と判定した。右側アクションバー候補IDの追加確認はfallback強化項目としてPhase 4へ持ち越す。
 - Phase 3以降の設定方針として、1日あたりShorts許可時間、一時解除ボタン、ブロック時の説明画面またはYouTube Home誘導画面を追加する方針を基本設計書とロードマップへ反映した。
 - Phase 3初回実装として`BlockSettingsRepository`を追加し、`blocking_enabled`、同意バージョン、1日許可時間、一時解除期限、許可時間消費量をDataStoreへ保存する構造を追加した。
-- `MainActivity`へブロックON／OFF、1日許可時間プリセット、5分/10分一時解除、同意状態表示を追加した。
+- `MainActivity`へブロックON／OFF、1日許可時間プリセット、一時解除状態、同意状態表示を追加した。
 - `ShortsBlockerService`でDataStore設定を監視し、未同意、OFF、一時解除中、許可時間内は解析・退避処理を行わないようPhase 2の仮ON設定を置き換えた。
 - Phase 3初回実装後に`testDebugUnitTest` 21件と`assembleDebug`が成功することを確認した。
 
@@ -315,7 +315,7 @@
 - `ShortsBlockerService`で許可時間が残っている場合も解析は継続し、Shorts検知時は退避せず消費時間のみ記録するようにした。
 - `MainActivity`へ今日の使用時間と残り許可時間の表示を追加した。
 - `RuntimeBlockSettingsTest` 4件、`ShortsAllowanceTrackerTest` 4件を追加し、`testDebugUnitTest`合計29件と`assembleDebug`が成功することを確認した。
-- `BlockInterventionActivity`を追加し、Shortsブロック後に自動離脱の説明、当日の許可時間状況、YouTubeへ戻る、設定を開く、5分/10分一時解除の導線を表示するようにした。
+- `BlockInterventionActivity`を追加し、Shortsブロック後に自動離脱の説明、当日の許可時間状況、YouTubeへ戻る、設定を開く、一時解除の導線を表示するようにした。
 - `ShortsBlockerService`でHOME退避成功後にブロック説明画面を表示し、表示に失敗した場合のみ既存Toastへフォールバックするようにした。
 - ブロック説明画面追加後に`testDebugUnitTest`と`assembleDebug`が成功することを確認した。
 - `AccessibilityConsentActivity`を追加し、ユーザー補助設定へ進む前に用途、アクセスする情報、端末内保存、外部送信なしを説明する明示的同意画面を表示するようにした。

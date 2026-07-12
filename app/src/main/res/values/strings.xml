@@ -24,7 +24,6 @@
     <string name="temporary_unblock_inactive">一時解除: 無効</string>
     <string name="temporary_unblock_active">一時解除: 残り約%d分</string>
     <string name="temporary_unblock_five">5分解除</string>
-    <string name="temporary_unblock_ten">10分解除</string>
     <string name="temporary_unblock_cancel">一時解除を停止</string>
     <string name="phase_three_notice">Phase 3: 設定は端末内に保存されます。ユーザー補助サービスは、同意済みかつブロック有効で、許可時間外・一時解除外の場合のみShortsを自動離脱します。</string>
     <string name="block_intervention_title">Shortsから離脱しました</string>

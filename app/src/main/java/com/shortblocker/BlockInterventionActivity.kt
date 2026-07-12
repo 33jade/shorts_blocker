@@ -36,10 +36,6 @@ class BlockInterventionActivity : AppCompatActivity() {
             temporarilyUnblockAndOpenYoutube(minutes = 5)
         }
 
-        binding.unblockTenButton.setOnClickListener {
-            temporarilyUnblockAndOpenYoutube(minutes = 10)
-        }
-
         binding.cancelUnblockButton.setOnClickListener {
             cancelTemporaryUnblock()
         }

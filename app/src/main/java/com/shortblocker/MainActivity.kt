@@ -177,6 +177,6 @@ class MainActivity : AppCompatActivity() {
 
     private companion object {
         private val DAILY_ALLOWANCE_OPTIONS = listOf(0, 5, 10, 15, 20, 30, 60)
-        private const val DEFAULT_DAILY_ALLOWANCE_MINUTES = 10
+        private const val DEFAULT_DAILY_ALLOWANCE_MINUTES = 0
     }
 }

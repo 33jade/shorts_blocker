@@ -81,7 +81,7 @@ class BlockSettingsRepository(
     companion object {
         const val REQUIRED_CONSENT_VERSION = 1
         private const val DEFAULT_BLOCKING_ENABLED = true
-        private const val DEFAULT_DAILY_ALLOWANCE_MINUTES = 10
+        private const val DEFAULT_DAILY_ALLOWANCE_MINUTES = 0
         private val ALLOWED_DAILY_ALLOWANCE_MINUTES = setOf(0, 5, 10, 15, 20, 30, 60)
 
         private val BLOCKING_ENABLED = booleanPreferencesKey("blocking_enabled")

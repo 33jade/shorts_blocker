@@ -43,29 +43,13 @@
         android:layout_marginTop="12dp"
         android:text="@string/block_intervention_open_settings" />
 
-    <LinearLayout
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/unblockFiveButton"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/unblockFiveButton"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            android:text="@string/temporary_unblock_five" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/unblockTenButton"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/temporary_unblock_ten" />
-    </LinearLayout>
+        android:text="@string/temporary_unblock_five" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cancelUnblockButton"
