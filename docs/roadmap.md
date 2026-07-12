@@ -265,7 +265,7 @@
 - [ ] Play ConsoleのAccessibilityService申告フォームを作成した
 - [ ] 審査用デモ動画を作成した
 - [ ] Data safetyを実装実態と照合して登録した
-- [ ] リリースビルドでデバッグログを無効化した
+- [x] リリースビルドでデバッグログを無効化した
 - [x] AC-01〜AC-12と性能試験の結果を記録した
 
 ## 7. 主なリスクと対応
@@ -364,3 +364,4 @@
 - Android 15/API 35エミュレータ上でPhase 4残確認を実施した。`testDebugUnitTest` 29件、`assembleDebug`、APK再インストール、許可時間プルダウン、プライバシーポリシー、一時解除開始・停止・自然期限切れ、Blocking OFF、保存済みOFF、他アプリ非干渉、Shortsブロック、YouTube Home誘導、性能スモークを確認した。
 - フォールバック系の失敗条件は実機上で自然再現しにくいため、`EvacuationSequenceRunnerTest`のHOMEフォールバック、HOME失敗通知抑止、root node再取得、途中OFF停止の単体テスト成功をPhase 4証跡として記録した。
 - ユーザー作成アイコン画像を中央正方形にトリミングし、launcher iconとadaptive iconとして設定した。`assembleDebug`と`assembleRelease`が成功することを確認した。
+- リリース版のログ方針を通常動作ログなし、エラー系のみ`Log.e`へ整理した。Shorts検知、YouTube node ID、許可時間消費、Global action失敗の通常ログはDebug限定または無出力にした。

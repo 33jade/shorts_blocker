@@ -126,7 +126,7 @@ class ShortsBlockerService : AccessibilityService() {
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                Log.w(TAG, "Failed to analyze active window.", e)
+                Log.e(TAG, "Failed to analyze active window.", e)
             } finally {
                 val currentJob = currentCoroutineContext()[Job]
                 if (analysisJob == currentJob) {
@@ -146,7 +146,7 @@ class ShortsBlockerService : AccessibilityService() {
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                Log.w(TAG, "Failed during evacuation sequence.", e)
+                Log.e(TAG, "Failed during evacuation sequence.", e)
             } finally {
                 resetSequenceStateIfCurrent(currentCoroutineContext()[Job])
             }
@@ -184,7 +184,7 @@ class ShortsBlockerService : AccessibilityService() {
         serviceScope.launch {
             settingsRepository.runtimeSettingsFlow
                 .catch { cause ->
-                    Log.w(TAG, "Failed to read block settings.", cause)
+                    Log.e(TAG, "Failed to read block settings.", cause)
                     invalidateRuntimeSettings()
                 }
                 .collect { settings ->
@@ -221,8 +221,8 @@ class ShortsBlockerService : AccessibilityService() {
                     EvacuationAction.Home -> GLOBAL_ACTION_HOME
                 }
                 val succeeded = performGlobalAction(androidAction)
-                if (!succeeded) {
-                    Log.w(TAG, "Global action failed: $androidAction")
+                if (!succeeded && BuildConfig.DEBUG) {
+                    Log.d(TAG, "Global action failed: $androidAction")
                 }
                 return succeeded
             }
@@ -301,7 +301,7 @@ class ShortsBlockerService : AccessibilityService() {
             lastBlockInterventionStartedElapsedMs = nowElapsedMs
             true
         }.getOrElse { cause ->
-            Log.w(TAG, "Failed to show block intervention screen.", cause)
+            Log.e(TAG, "Failed to show block intervention screen.", cause)
             false
         }
     }
