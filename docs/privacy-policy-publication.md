@@ -6,9 +6,9 @@ Last updated: 2026-07-12
 
 - Source text: `docs/privacy-policy.md`
 - In-app text: `app/src/main/res/values/strings.xml`
-- GitHub repository: `Yahiro-Atsushi/shorts_blocker`
-- Publication status: published by GitHub Pages
-- Public URL: `https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html`
+- GitHub repository: `33jade/shorts_blocker`
+- Publication status: repository target corrected, GitHub Pages publication pending
+- Public URL: `https://33jade.github.io/shorts_blocker/privacy-policy.html`
 - Selected publication option: GitHub Pages
 - Developer name: Sashimi Teriyaki
 - Privacy contact: sashimi.teriyaki.343@gmail.com
@@ -26,12 +26,12 @@ The developer name should match the Google Play developer profile. The contact e
 
 GitHub Pages will be used because the project source will be published on GitHub.
 
-Repository: `Yahiro-Atsushi/shorts_blocker`
+Repository: `33jade/shorts_blocker`
 
 Public privacy policy URL:
 
 ```text
-https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html
+https://33jade.github.io/shorts_blocker/privacy-policy.html
 ```
 
 Use GitHub Pages with:
@@ -55,7 +55,7 @@ After the repository is created, enable GitHub Pages for the repository:
 gh api `
   --method POST `
   -H "Accept: application/vnd.github+json" `
-  /repos/Yahiro-Atsushi/shorts_blocker/pages `
+  /repos/33jade/shorts_blocker/pages `
   -f "source[branch]=main" `
   -f "source[path]=/docs"
 ```
@@ -63,7 +63,7 @@ gh api `
 Then confirm the Pages URL:
 
 ```powershell
-gh api /repos/Yahiro-Atsushi/shorts_blocker/pages --jq .html_url
+gh api /repos/33jade/shorts_blocker/pages --jq .html_url
 ```
 
 ## Alternative Publication Options
@@ -80,8 +80,8 @@ gh api /repos/Yahiro-Atsushi/shorts_blocker/pages --jq .html_url
 
 - [x] Replace developer name.
 - [x] Replace privacy contact.
-- [x] Enable GitHub Pages over HTTPS.
-- [x] Confirm the page is accessible without login.
+- [ ] Enable GitHub Pages over HTTPS for `33jade/shorts_blocker`.
+- [ ] Confirm the page is accessible without login.
 - [x] Record the public URL in `docs/roadmap.md`.
 - [ ] Add the public URL to Google Play Console.
 - [ ] Re-check that the published text matches the in-app disclosure.

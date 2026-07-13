@@ -260,7 +260,7 @@
 - [x] ユーザー補助設定へ進む前に、個別の目立つ開示と明示的同意を実装した
 - [x] 収集・保存・外部送信するデータの有無を明示した
 - [x] アプリ内およびストア掲載用のプライバシーポリシー文面を作成した
-- [x] ストア掲載用のプライバシーポリシーURLを公開した
+- [ ] ストア掲載用のプライバシーポリシーURLを公開した
 - [ ] Google Playの最新ポリシーを確認した
 - [ ] Play ConsoleのAccessibilityService申告フォームを作成した
 - [ ] 審査用デモ動画を作成した
@@ -368,3 +368,4 @@
 - ストア掲載用プライバシーポリシー文面を公開前提の形へ整理し、開発者名をSashimi Teriyaki、問い合わせ先を`sashimi.teriyaki.343@gmail.com`として反映した。公開URLの発行は外部ホスティング決定後に実施する。
 - GitHub公開先を`Yahiro-Atsushi/shorts_blocker`に決定し、プライバシーポリシー公開予定URLを`https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html`として記録した。GitHub Pages公開確認後にリリース前チェックリストを更新する。
 - GitHub Pagesを`main`ブランチの`/docs`で有効化し、`https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html`がHTTP 200で公開されていることを確認した。
+- GitHub公開先アカウントを`33jade/shorts_blocker`へ修正した。正しいプライバシーポリシー公開予定URLは`https://33jade.github.io/shorts_blocker/privacy-policy.html`で、正しいアカウントでのGitHub Pages公開確認後にリリース前チェックリストを完了へ戻す。
