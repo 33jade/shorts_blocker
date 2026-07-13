@@ -44,7 +44,7 @@ Use GitHub Pages with:
 Run these commands after logging in with GitHub CLI:
 
 ```powershell
-cd <repo-root>\ShortBlocker
+cd <repo-root>\ShortsBlocker
 gh auth login
 git push -u origin main
 ```

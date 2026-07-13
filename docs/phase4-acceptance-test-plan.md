@@ -31,7 +31,7 @@ Fill this table for each run.
 Run from this directory:
 
 ```powershell
-Set-Location -LiteralPath "<repo-root>\ShortBlocker"
+Set-Location -LiteralPath "<repo-root>\ShortsBlocker"
 $env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
 $env:Path = "$env:JAVA_HOME\bin;$env:LOCALAPPDATA\Android\Sdk\platform-tools;$env:Path"
 ```

@@ -29,7 +29,7 @@ Android Studioでプロジェクトを開き、必要なSDKをインストール
 ## Useful Commands
 
 ```powershell
-cd <repo-root>\ShortBlocker
+cd <repo-root>\ShortsBlocker
 $env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
 $env:Path = "$env:JAVA_HOME\bin;$env:LOCALAPPDATA\Android\Sdk\platform-tools;$env:Path"
 
