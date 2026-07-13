@@ -365,8 +365,5 @@
 - フォールバック系の失敗条件は実機上で自然再現しにくいため、`EvacuationSequenceRunnerTest`のHOMEフォールバック、HOME失敗通知抑止、root node再取得、途中OFF停止の単体テスト成功をPhase 4証跡として記録した。
 - ユーザー作成アイコン画像を中央正方形にトリミングし、launcher iconとadaptive iconとして設定した。`assembleDebug`と`assembleRelease`が成功することを確認した。
 - リリース版のログ方針を通常動作ログなし、エラー系のみ`Log.e`へ整理した。Shorts検知、YouTube node ID、許可時間消費、Global action失敗の通常ログはDebug限定または無出力にした。
-- ストア掲載用プライバシーポリシー文面を公開前提の形へ整理し、開発者名をSashimi Teriyaki、問い合わせ先を`sashimi.teriyaki.343@gmail.com`として反映した。公開URLの発行は外部ホスティング決定後に実施する。
-- GitHub公開先を`Yahiro-Atsushi/shorts_blocker`に決定し、プライバシーポリシー公開予定URLを`https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html`として記録した。GitHub Pages公開確認後にリリース前チェックリストを更新する。
-- GitHub Pagesを`main`ブランチの`/docs`で有効化し、`https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html`がHTTP 200で公開されていることを確認した。
-- GitHub公開先アカウントを`33jade/shorts_blocker`へ修正した。正しいプライバシーポリシー公開予定URLは`https://33jade.github.io/shorts_blocker/privacy-policy.html`で、正しいアカウントでのGitHub Pages公開確認後にリリース前チェックリストを完了へ戻す。
-- GitHub Pagesを`33jade/shorts_blocker`の`main`ブランチ`/docs`で有効化し、`https://33jade.github.io/shorts_blocker/privacy-policy.html`がHTTP 200で公開されていることを確認した。
+- ストア掲載用プライバシーポリシー文面を公開前提の形へ整理した。開発者名と問い合わせ先はGoogle Play Console側で管理し、リポジトリ内docsには残さない方針とした。
+- GitHub Pagesを`main`ブランチの`/docs`で有効化し、プライバシーポリシーURLがHTTP 200で公開されていることを確認した。具体URLはGoogle Play Console側で管理し、リポジトリ内docsには残さない方針とした。

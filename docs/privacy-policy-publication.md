@@ -6,32 +6,32 @@ Last updated: 2026-07-12
 
 - Source text: `docs/privacy-policy.md`
 - In-app text: `app/src/main/res/values/strings.xml`
-- GitHub repository: `33jade/shorts_blocker`
+- GitHub repository: configured in the local Git remote
 - Publication status: published by GitHub Pages
-- Public URL: `https://33jade.github.io/shorts_blocker/privacy-policy.html`
+- Public URL: configured in Google Play Console
 - Selected publication option: GitHub Pages
-- Developer name: Sashimi Teriyaki
-- Privacy contact: sashimi.teriyaki.343@gmail.com
+- Developer name: configured in Google Play Console
+- Privacy contact: configured in Google Play Console
 
 ## Values Confirmed Before Publication
 
-These values have been applied to `docs/privacy-policy.md`:
+These values are managed outside this repository:
 
-- Developer name: Sashimi Teriyaki
-- Privacy contact: sashimi.teriyaki.343@gmail.com
+- Developer name
+- Privacy contact
 
-The developer name should match the Google Play developer profile. The contact email should be reachable by users.
+The developer name should match the Google Play developer profile. The privacy contact should be reachable by users.
 
 ## Selected Publication Option
 
 GitHub Pages will be used because the project source will be published on GitHub.
 
-Repository: `33jade/shorts_blocker`
+Repository: configured in the local Git remote
 
 Public privacy policy URL:
 
 ```text
-https://33jade.github.io/shorts_blocker/privacy-policy.html
+Configure the GitHub Pages privacy policy URL in Google Play Console.
 ```
 
 Use GitHub Pages with:
@@ -55,7 +55,7 @@ After the repository is created, enable GitHub Pages for the repository:
 gh api `
   --method POST `
   -H "Accept: application/vnd.github+json" `
-  /repos/33jade/shorts_blocker/pages `
+  /repos/<owner>/<repo>/pages `
   -f "source[branch]=main" `
   -f "source[path]=/docs"
 ```
@@ -63,7 +63,7 @@ gh api `
 Then confirm the Pages URL:
 
 ```powershell
-gh api /repos/33jade/shorts_blocker/pages --jq .html_url
+gh api /repos/<owner>/<repo>/pages --jq .html_url
 ```
 
 ## Alternative Publication Options
@@ -78,9 +78,9 @@ gh api /repos/33jade/shorts_blocker/pages --jq .html_url
 
 ## Publication Checklist
 
-- [x] Replace developer name.
-- [x] Replace privacy contact.
-- [x] Enable GitHub Pages over HTTPS for `33jade/shorts_blocker`.
+- [x] Keep developer name out of repository docs.
+- [x] Keep privacy contact out of repository docs.
+- [x] Enable GitHub Pages over HTTPS.
 - [x] Confirm the page is accessible without login.
 - [x] Record the public URL in `docs/roadmap.md`.
 - [ ] Add the public URL to Google Play Console.

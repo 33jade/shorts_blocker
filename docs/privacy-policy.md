@@ -11,10 +11,10 @@ ShortBlocker helps reduce long viewing sessions on YouTube Shorts. The app uses 
 ## 2. Developer and Contact
 
 - App name: ShortBlocker
-- Developer: Sashimi Teriyaki
-- Privacy contact: sashimi.teriyaki.343@gmail.com
+- Developer: See the Google Play store listing.
+- Privacy contact: See the Google Play store listing.
 
-The developer name should match the Google Play developer profile, and the privacy contact should be reachable by users.
+The developer name and privacy contact are provided through the Google Play store listing.
 
 ## 3. Data Accessed by the App
 
