@@ -36,7 +36,7 @@ https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html
 
 Use GitHub Pages with:
 
-- Source branch: `master`
+- Source branch: `main`
 - Source folder: `/docs`
 
 ## Local Publish Commands
@@ -46,7 +46,7 @@ Run these commands after logging in with GitHub CLI:
 ```powershell
 cd C:\Users\816a2\Dev-Projects\YoutubeShortBlocker
 gh auth login
-git push -u origin master
+git push -u origin main
 ```
 
 After the repository is created, enable GitHub Pages for the repository:
@@ -56,7 +56,7 @@ gh api `
   --method POST `
   -H "Accept: application/vnd.github+json" `
   /repos/Yahiro-Atsushi/shorts_blocker/pages `
-  -f "source[branch]=master" `
+  -f "source[branch]=main" `
   -f "source[path]=/docs"
 ```
 
