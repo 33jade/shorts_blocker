@@ -6,8 +6,9 @@ Last updated: 2026-07-12
 
 - Source text: `docs/privacy-policy.md`
 - In-app text: `app/src/main/res/values/strings.xml`
-- Publication status: not published yet
-- Public URL: not decided yet
+- GitHub repository: `Yahiro-Atsushi/shorts_blocker`
+- Publication status: repository created, not published by GitHub Pages yet
+- Public URL: `https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html`
 - Selected publication option: GitHub Pages
 - Developer name: Sashimi Teriyaki
 - Privacy contact: sashimi.teriyaki.343@gmail.com
@@ -25,12 +26,12 @@ The developer name should match the Google Play developer profile. The contact e
 
 GitHub Pages will be used because the project source will be published on GitHub.
 
-Suggested repository name: `ShortBlocker`
+Repository: `Yahiro-Atsushi/shorts_blocker`
 
-Suggested public privacy policy URL:
+Public privacy policy URL:
 
 ```text
-https://<github-user>.github.io/ShortBlocker/privacy-policy.html
+https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html
 ```
 
 Use GitHub Pages with:
@@ -45,7 +46,7 @@ Run these commands after logging in with GitHub CLI:
 ```powershell
 cd C:\Users\816a2\Dev-Projects\YoutubeShortBlocker
 gh auth login
-gh repo create ShortBlocker --public --source . --remote origin --push
+git push -u origin master
 ```
 
 After the repository is created, enable GitHub Pages for the repository:
@@ -54,7 +55,7 @@ After the repository is created, enable GitHub Pages for the repository:
 gh api `
   --method POST `
   -H "Accept: application/vnd.github+json" `
-  /repos/:owner/ShortBlocker/pages `
+  /repos/Yahiro-Atsushi/shorts_blocker/pages `
   -f "source[branch]=master" `
   -f "source[path]=/docs"
 ```
@@ -62,7 +63,7 @@ gh api `
 Then confirm the Pages URL:
 
 ```powershell
-gh api /repos/:owner/ShortBlocker/pages --jq .html_url
+gh api /repos/Yahiro-Atsushi/shorts_blocker/pages --jq .html_url
 ```
 
 ## Alternative Publication Options

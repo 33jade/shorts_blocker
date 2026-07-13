@@ -366,3 +366,4 @@
 - ユーザー作成アイコン画像を中央正方形にトリミングし、launcher iconとadaptive iconとして設定した。`assembleDebug`と`assembleRelease`が成功することを確認した。
 - リリース版のログ方針を通常動作ログなし、エラー系のみ`Log.e`へ整理した。Shorts検知、YouTube node ID、許可時間消費、Global action失敗の通常ログはDebug限定または無出力にした。
 - ストア掲載用プライバシーポリシー文面を公開前提の形へ整理し、開発者名をSashimi Teriyaki、問い合わせ先を`sashimi.teriyaki.343@gmail.com`として反映した。公開URLの発行は外部ホスティング決定後に実施する。
+- GitHub公開先を`Yahiro-Atsushi/shorts_blocker`に決定し、プライバシーポリシー公開予定URLを`https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html`として記録した。GitHub Pages公開確認後にリリース前チェックリストを更新する。
