@@ -1,34 +1,46 @@
 # ShortBlocker
 
-Androidのユーザー補助サービスを利用し、YouTube Shortsの長時間閲覧を防ぐアプリです。
+ShortBlockerは、YouTube Shortsの長時間閲覧を防ぐためのAndroidアプリです。
 
-## 現在の状態
+## Current Status
 
-Phase 4（テスト・改善）を実施中です。
+Phase 4の受け入れテストと改善対応は完了済みです。
 
-- Android 8.0（API 26）以上
+- Android 8.0 (API 26) 以上
 - Kotlin
-- ユーザー補助サービスの登録
-- サービス有効状態の表示
-- ユーザー補助設定画面への導線
-- Shorts再生画面の検知ロジック
-- 1日許可時間、一時解除、ブロック説明画面
-- ユーザー補助サービス向けの明示的同意画面
+- AccessibilityServiceによるYouTube Shorts画面検知
+- Shorts検知時のYouTube Home誘導
+- 1日あたりのShorts許可時間設定
+- 一時解除機能
+- ブロック説明画面
+- 明示的同意画面
 - アプリ内プライバシーポリシー
-- Phase 4受け入れテスト計画
+- リリースビルドの通常ログ無効化
 
-現在はDebug APKで受け入れテストと改善を進めています。
+## Development Environment
 
-## 開発環境
-
-- JDK 17
+- JDK 17以上
 - Android SDK 35
 - Android Gradle Plugin 8.13.2
 - Gradle 8.13
 
 Android Studioでプロジェクトを開き、必要なSDKをインストールして同期してください。
 
-## ドキュメント
+## Useful Commands
 
-- [基本設計書](docs/basic-design.md)
-- [開発ロードマップ](docs/roadmap.md)
+```powershell
+cd C:\Users\816a2\Dev-Projects\YoutubeShortBlocker
+$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
+$env:Path = "$env:JAVA_HOME\bin;C:\Users\816a2\AppData\Local\Android\Sdk\platform-tools;$env:Path"
+
+.\gradlew.bat testDebugUnitTest
+.\gradlew.bat assembleDebug
+```
+
+## Documents
+
+- [Basic design](docs/basic-design.md)
+- [Roadmap](docs/roadmap.md)
+- [Phase 4 acceptance test plan](docs/phase4-acceptance-test-plan.md)
+- [Privacy policy](docs/privacy-policy.md)
+- [Privacy policy publication plan](docs/privacy-policy-publication.md)
