@@ -298,7 +298,7 @@
 - `assembleDebug`が警告なしで成功することを確認した。
 - Pixel 9a API 35エミュレータを作成して起動した。
 - ADBで`emulator-5554`が`device`として認識されることを確認した。
-- Phase 1エビデンスとして、`C:\Users\816a2\Desktop\tmp\20260709_YoutubeShortBlocker_Phase1Evidence` にホーム画面、アプリ画面、Accessibility一覧、権限ダイアログ、サービス有効化後状態のスクリーンショットを保存した。
+- Phase 1エビデンスとして、ローカル証跡フォルダにホーム画面、アプリ画面、Accessibility一覧、権限ダイアログ、サービス有効化後状態のスクリーンショットを保存した。
 - Phase 1の完了条件を満たしたため、次作業をPhase 2の検知・退避ロジック実装へ更新した。
 - Phase 2の初回実装として、`ShortsDetector`による決定表ベースの検知、サービス側のYouTubeイベント絞り込み、300 ms解析スロットリング、trailing実行、BACK最大2回とHOMEフォールバックの退避シーケンスを追加した。
 - Phase 2初回実装後に`assembleDebug`が成功することを確認した。
@@ -307,9 +307,9 @@
 
 - PowerShellの`JAVA_HOME`とAndroid SDK `platform-tools`のPATHを設定し、ユーザー側Terminalから`assembleDebug`、`adb devices`、APK再インストールが成功することを確認した。
 - Pixel 9a API 35エミュレータへPhase 2 APKを導入し、YouTube上でShorts検知・退避ロジックの手動動作確認が良好であることを確認した。
-- Phase 2証跡として、`C:\Users\816a2\Desktop\tmp\20260709_ShortBlocker_Phase2Evidence\Screen_recording_20260710_000218.webm` を保存した。
+- Phase 2証跡として、ローカル証跡フォルダにShorts検知の画面録画を保存した。
 - `adb logcat -s ShortsBlockerService`で`Shorts screen detected: ReelRecyclerWithShortsLabel`が複数回出力されることを確認し、標準的なShorts再生画面が決定表No.1で検知されることを確認した。
-- 追加のPhase 2証跡として、`C:\Users\816a2\Desktop\tmp\20260709_ShortBlocker_Phase2Evidence\Screen_recording_20260710_000726.webm` を保存した。
+- 追加のPhase 2証跡として、ローカル証跡フォルダに通常画面誤検知なし確認の画面録画を保存した。
 - `adb logcat -c`後に通常動画、検索、チャンネル画面を操作し、`ShortsBlockerService`の検知ログが新規出力されないことを確認した。
 - `ShortsDetector`をJVM単体テスト可能な入力構造へ整理し、決定表の主要ケースを検証する`ShortsDetectorTest`を追加した。
 - `testDebugUnitTest`で`ShortsDetectorTest` 6件が成功し、`assembleDebug`も成功することを確認した。

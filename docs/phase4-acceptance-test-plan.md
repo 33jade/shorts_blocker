@@ -31,33 +31,33 @@ Fill this table for each run.
 Run from this directory:
 
 ```powershell
-Set-Location -LiteralPath "C:\Users\816a2\Dev-Projects\YoutubeShortBlocker"
+Set-Location -LiteralPath "<repo-root>\ShortBlocker"
 $env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
-$env:Path = "$env:JAVA_HOME\bin;C:\Users\816a2\AppData\Local\Android\Sdk\platform-tools;$env:Path"
+$env:Path = "$env:JAVA_HOME\bin;$env:LOCALAPPDATA\Android\Sdk\platform-tools;$env:Path"
 ```
 
 Preflight:
 
 ```powershell
 & "C:\Program Files\Android\Android Studio\jbr\bin\java.exe" --version
-& "C:\Users\816a2\AppData\Local\Android\Sdk\platform-tools\adb.exe" version
-& "C:\Users\816a2\AppData\Local\Android\Sdk\platform-tools\adb.exe" devices
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" version
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" devices
 .\gradlew.bat testDebugUnitTest
 .\gradlew.bat assembleDebug
-& "C:\Users\816a2\AppData\Local\Android\Sdk\platform-tools\adb.exe" install -r "C:\Users\816a2\Dev-Projects\YoutubeShortBlocker\app\build\outputs\apk\debug\app-debug.apk"
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" install -r ".\app\build\outputs\apk\debug\app-debug.apk"
 ```
 
 Useful log commands:
 
 ```powershell
-& "C:\Users\816a2\AppData\Local\Android\Sdk\platform-tools\adb.exe" logcat -c
-& "C:\Users\816a2\AppData\Local\Android\Sdk\platform-tools\adb.exe" logcat -s ShortsBlockerService
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" logcat -c
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" logcat -s ShortsBlockerService
 ```
 
 Launch app:
 
 ```powershell
-& "C:\Users\816a2\AppData\Local\Android\Sdk\platform-tools\adb.exe" shell monkey -p com.shortblocker 1
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" shell monkey -p com.shortblocker 1
 ```
 
 ## 4. Acceptance Tests
@@ -123,7 +123,7 @@ Run the first pass in this order:
 Suggested local evidence folder:
 
 ```text
-C:\Users\816a2\Desktop\tmp\20260712_YoutubeShortBlocker_Phase4Evidence
+<local-evidence-root>\20260712_ShortBlocker_Phase4Evidence
 ```
 
 Suggested evidence names:

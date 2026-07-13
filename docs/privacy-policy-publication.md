@@ -44,7 +44,7 @@ Use GitHub Pages with:
 Run these commands after logging in with GitHub CLI:
 
 ```powershell
-cd C:\Users\816a2\Dev-Projects\YoutubeShortBlocker
+cd <repo-root>\ShortBlocker
 gh auth login
 git push -u origin main
 ```
