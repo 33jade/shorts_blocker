@@ -2,7 +2,7 @@
 
 Last updated: 2026-07-12
 
-This Privacy Policy explains how ShortBlocker handles data.
+This Privacy Policy explains how ShortBlocker handles data. It is intended for publication as the privacy policy linked from the app and the store listing.
 
 ## 1. App Purpose
 
@@ -11,10 +11,10 @@ ShortBlocker helps reduce long viewing sessions on YouTube Shorts. The app uses 
 ## 2. Developer and Contact
 
 - App name: ShortBlocker
-- Developer: TODO: developer name
-- Privacy contact: TODO: contact email or contact form URL
+- Developer: Sashimi Teriyaki
+- Privacy contact: sashimi.teriyaki.343@gmail.com
 
-Before publishing this app, replace the TODO values above with the developer name shown on Google Play and a valid privacy contact.
+The developer name should match the Google Play developer profile, and the privacy contact should be reachable by users.
 
 ## 3. Data Accessed by the App
 
@@ -46,9 +46,9 @@ ShortBlocker does not collect, transmit, sell, or share personal data with exter
 
 The app does not use accounts, advertising identifiers, analytics SDKs, crash reporting SDKs, or external tracking SDKs.
 
-## 6. Debug Logs
+## 6. Logs
 
-Debug builds may write YouTube screen node IDs to local Android logcat for development and verification. These logs are not transmitted by the app. Release builds must not expose development-only screen structure logs.
+Debug builds may write YouTube screen node IDs or other diagnostic messages to local Android logcat for development and verification. These logs are not transmitted by the app. Release builds do not output normal operation logs or development-only screen structure logs. Release builds keep only error logs for unexpected failures.
 
 ## 7. Data Retention and Deletion
 
@@ -79,3 +79,7 @@ The AccessibilityService is not used to read passwords, payment information, pri
 ## 10. Changes to This Policy
 
 If the app's data access, storage, sharing, or AccessibilityService behavior changes, this Privacy Policy and the in-app disclosure will be updated. If the consent disclosure changes materially, the app will require consent to the updated version before analysis or automatic actions resume.
+
+## Publication Checklist
+
+Before publishing, confirm that the developer name and privacy contact above match the Google Play store listing.
