@@ -7,7 +7,7 @@ Last updated: 2026-07-12
 - Source text: `docs/privacy-policy.md`
 - In-app text: `app/src/main/res/values/strings.xml`
 - GitHub repository: `Yahiro-Atsushi/shorts_blocker`
-- Publication status: repository created, not published by GitHub Pages yet
+- Publication status: published by GitHub Pages
 - Public URL: `https://yahiro-atsushi.github.io/shorts_blocker/privacy-policy.html`
 - Selected publication option: GitHub Pages
 - Developer name: Sashimi Teriyaki
@@ -80,8 +80,8 @@ gh api /repos/Yahiro-Atsushi/shorts_blocker/pages --jq .html_url
 
 - [x] Replace developer name.
 - [x] Replace privacy contact.
-- [ ] Publish the page over HTTPS.
-- [ ] Confirm the page is accessible without login.
-- [ ] Record the public URL in `docs/roadmap.md`.
+- [x] Enable GitHub Pages over HTTPS.
+- [x] Confirm the page is accessible without login.
+- [x] Record the public URL in `docs/roadmap.md`.
 - [ ] Add the public URL to Google Play Console.
 - [ ] Re-check that the published text matches the in-app disclosure.
