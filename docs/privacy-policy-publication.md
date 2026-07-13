@@ -7,7 +7,7 @@ Last updated: 2026-07-12
 - Source text: `docs/privacy-policy.md`
 - In-app text: `app/src/main/res/values/strings.xml`
 - GitHub repository: `33jade/shorts_blocker`
-- Publication status: repository target corrected, GitHub Pages publication pending
+- Publication status: published by GitHub Pages
 - Public URL: `https://33jade.github.io/shorts_blocker/privacy-policy.html`
 - Selected publication option: GitHub Pages
 - Developer name: Sashimi Teriyaki
@@ -80,8 +80,8 @@ gh api /repos/33jade/shorts_blocker/pages --jq .html_url
 
 - [x] Replace developer name.
 - [x] Replace privacy contact.
-- [ ] Enable GitHub Pages over HTTPS for `33jade/shorts_blocker`.
-- [ ] Confirm the page is accessible without login.
+- [x] Enable GitHub Pages over HTTPS for `33jade/shorts_blocker`.
+- [x] Confirm the page is accessible without login.
 - [x] Record the public URL in `docs/roadmap.md`.
 - [ ] Add the public URL to Google Play Console.
 - [ ] Re-check that the published text matches the in-app disclosure.
