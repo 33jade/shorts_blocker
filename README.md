@@ -44,3 +44,4 @@ $env:Path = "$env:JAVA_HOME\bin;$env:LOCALAPPDATA\Android\Sdk\platform-tools;$en
 - [Phase 4 acceptance test plan](docs/phase4-acceptance-test-plan.md)
 - [Privacy policy](docs/privacy-policy.md)
 - [Privacy policy publication plan](docs/privacy-policy-publication.md)
+- [Personal release APK signing](docs/personal-release-signing.md)

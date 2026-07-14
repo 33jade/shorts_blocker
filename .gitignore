@@ -7,3 +7,9 @@ captures/
 .externalNativeBuild/
 .cxx/
 app/build/
+# Local release signing secrets
+keystore.properties
+*.jks
+*.keystore
+*.p12
+release/

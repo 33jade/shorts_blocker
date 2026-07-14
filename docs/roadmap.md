@@ -367,3 +367,4 @@
 - リリース版のログ方針を通常動作ログなし、エラー系のみ`Log.e`へ整理した。Shorts検知、YouTube node ID、許可時間消費、Global action失敗の通常ログはDebug限定または無出力にした。
 - ストア掲載用プライバシーポリシー文面を公開前提の形へ整理した。開発者名と問い合わせ先はGoogle Play Console側で管理し、リポジトリ内docsには残さない方針とした。
 - GitHub Pagesを`main`ブランチの`/docs`で有効化し、プライバシーポリシーURLがHTTP 200で公開されていることを確認した。具体URLはGoogle Play Console側で管理し、リポジトリ内docsには残さない方針とした。
+- 個人利用向けrelease APK署名設定として、`keystore.properties`参照のrelease signing config、Git除外、テンプレート、`docs/personal-release-signing.md`を追加した。実keystoreとパスワードはローカル管理とし、リポジトリには含めない。
