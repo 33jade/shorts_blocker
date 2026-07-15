@@ -368,3 +368,4 @@
 - ストア掲載用プライバシーポリシー文面を公開前提の形へ整理した。開発者名と問い合わせ先はGoogle Play Console側で管理し、リポジトリ内docsには残さない方針とした。
 - GitHub Pagesを`main`ブランチの`/docs`で有効化し、プライバシーポリシーURLがHTTP 200で公開されていることを確認した。具体URLはGoogle Play Console側で管理し、リポジトリ内docsには残さない方針とした。
 - 個人利用向けrelease APK署名設定として、`keystore.properties`参照のrelease signing config、Git除外、テンプレート、`docs/personal-release-signing.md`を追加した。実keystoreとパスワードはローカル管理とし、リポジトリには含めない。
+- 実機で時間経過後にブロックが復帰しない可能性への対策として、一時解除期限切れ時の自動再解析タイマーと、1日許可時間を使い切った検知で即ブロックへ進む処理を追加した。

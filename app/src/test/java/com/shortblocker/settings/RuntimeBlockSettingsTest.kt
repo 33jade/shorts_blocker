@@ -1,4 +1,4 @@
-﻿package com.shortblocker.settings
+package com.shortblocker.settings
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -53,6 +53,21 @@ class RuntimeBlockSettingsTest {
 
         assertFalse(settings.isAnalysisAllowed(nowEpochMs = 1_000L))
         assertFalse(settings.isBlockingActive(nowEpochMs = 1_000L, currentDate = today))
+    }
+
+
+    @Test
+    fun schedulesAnalysisResumeWhenTemporaryUnblockIsActive() {
+        val settings = settings(temporaryUnblockUntilEpochMs = 2_500L)
+
+        assertEquals(1_500L, settings.analysisResumeDelayMs(nowEpochMs = 1_000L))
+    }
+
+    @Test
+    fun doesNotScheduleAnalysisResumeWhenTemporaryUnblockExpired() {
+        val settings = settings(temporaryUnblockUntilEpochMs = 1_000L)
+
+        assertEquals(null, settings.analysisResumeDelayMs(nowEpochMs = 1_000L))
     }
 
     private fun settings(

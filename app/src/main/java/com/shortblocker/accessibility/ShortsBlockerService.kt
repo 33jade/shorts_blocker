@@ -1,4 +1,4 @@
-﻿package com.shortblocker.accessibility
+package com.shortblocker.accessibility
 
 import android.accessibilityservice.AccessibilityService
 import android.content.Intent
@@ -39,6 +39,7 @@ class ShortsBlockerService : AccessibilityService() {
     private var evacuationJob: Job? = null
     private var analysisJob: Job? = null
     private var scheduledAnalysisJob: Job? = null
+    private var runtimeResumeJob: Job? = null
     private var lastBlockInterventionStartedElapsedMs = 0L
 
     private var settingsLoaded = false
@@ -71,6 +72,7 @@ class ShortsBlockerService : AccessibilityService() {
     override fun onInterrupt() = Unit
 
     override fun onDestroy() {
+        runtimeResumeJob?.cancel()
         serviceJob.cancel()
         super.onDestroy()
     }
@@ -190,6 +192,7 @@ class ShortsBlockerService : AccessibilityService() {
                 .collect { settings ->
                     settingsLoaded = true
                     runtimeSettingsCache = settings
+                    scheduleRuntimeResumeIfNeeded(settings)
                     if (!isAnalysisAllowed()) {
                         scheduledAnalysisJob?.cancel()
                         evacuationJob?.cancel()
@@ -206,8 +209,21 @@ class ShortsBlockerService : AccessibilityService() {
             acceptedConsentVersion = 0,
         )
         scheduledAnalysisJob?.cancel()
+        runtimeResumeJob?.cancel()
         evacuationJob?.cancel()
         allowanceTracker.reset()
+    }
+
+    private fun scheduleRuntimeResumeIfNeeded(settings: RuntimeBlockSettings) {
+        runtimeResumeJob?.cancel()
+        val delayMs = settings.analysisResumeDelayMs(System.currentTimeMillis()) ?: return
+        runtimeResumeJob = serviceScope.launch {
+            delay(delayMs)
+            runtimeResumeJob = null
+            if (isAnalysisAllowed() && evacuationJob?.isActive != true) {
+                analysisEventController.request(AnalysisEventKind.WindowStateChanged)
+            }
+        }
     }
 
     private fun createEvacuationEnvironment(): EvacuationSequenceRunner.Environment =
@@ -272,6 +288,7 @@ class ShortsBlockerService : AccessibilityService() {
             return false
         }
 
+        val remainingMsBeforeRecord = runtimeSettingsCache.allowanceRemainingMs(today)
         val usageMs = allowanceTracker.recordShortsDetected(SystemClock.elapsedRealtime())
         if (usageMs > 0L) {
             serviceScope.launch {
@@ -282,7 +299,9 @@ class ShortsBlockerService : AccessibilityService() {
         if (BuildConfig.DEBUG) {
             Log.d(TAG, "Shorts allowed by daily allowance. Recorded ${usageMs}ms.")
         }
-        return true
+
+        val allowanceConsumed = usageMs >= remainingMsBeforeRecord
+        return !allowanceConsumed
     }
 
     private fun showBlockInterventionScreen(): Boolean {

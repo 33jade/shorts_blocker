@@ -1,4 +1,4 @@
-﻿package com.shortblocker.settings
+package com.shortblocker.settings
 
 import android.content.Context
 import androidx.datastore.preferences.core.booleanPreferencesKey
@@ -142,6 +142,12 @@ data class RuntimeBlockSettings(
         blockingEnabled &&
             isConsentAccepted() &&
             !isTemporarilyUnblocked(nowEpochMs)
+
+    fun analysisResumeDelayMs(nowEpochMs: Long): Long? {
+        if (!blockingEnabled || !isConsentAccepted()) return null
+        val remainingMs = temporaryUnblockUntilEpochMs - nowEpochMs
+        return if (remainingMs > 0L) remainingMs else null
+    }
 
     fun isBlockingActive(nowEpochMs: Long, currentDate: LocalDate): Boolean =
         blockingEnabled &&
